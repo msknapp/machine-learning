@@ -1,0 +1,15 @@
+
+# Lessons Learned
+# 1. Neighborhood doesn't matter as much as you think
+# 2. lot area is not a good feature
+# 3. Overall quality is significant.
+# 4. Total area including the basement is a better predictor than GrLivingArea
+# 5. There is a clear exponential trend in the price with area
+# 6. One easy way to eliminate outliers is to remove rows with a total area over 7000 square feet.
+# 7. The seasonal trend, and the trend over the years, is hard to pin down and count on.  The only obvious trend is
+#    that there are more homes sold in the summer.
+# 8. The relation of price and overall quality seems to be exponential just slightly.
+# 9. It is hard to draw a conclusion from the number of bedrooms or bathrooms.
+# 10. Take the log of the overall quality, it is more of a linear relationship.
+
+# Want a plot of month, year and average price

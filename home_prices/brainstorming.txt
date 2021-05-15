@@ -1,0 +1,115 @@
+
+Ideas:
+* consider non-linear models.
+* multiple models
+* one-hot encode conditions.
+
+Done:
+* identify outliers and remove them.
+* remove some features
+* write a custom estimator so that you can adjust its parameters.
+* aggregate some features.
+* decompose some highly correlated features, do clustering on some features.
+* use knn to impute missing values.
+* different methods of normalizing some things.
+* correct features for their skew, consider better ways to standardize features
+* consider seasonal effects
+
+Age:
+  - YearBuilt: could convert to an age.
+  - YearRemodAdd: May one-hot encode this to record the fact that the home was re-modeled.
+  - MoSold:
+  - YrSold: may want to keep both of these because market swings and seasonal affects can be dramatic.  Combine
+    the two though, into a total months.  Maybe one-hot encode a season though, or apply like a sinusoidal curve
+    to it.
+Location: can incorporate some information from conditions here, like if it is on a cul-de-sac, arterial street, feeder street, etc.
+  - Neighborhood:
+  - LotConfig:
+    MSSubClass:
+    MSZoning:
+Sale: should definitely one-hot encode these things
+    SaleType:
+    SaleCondition:
+Area:
+  - 1stFlrSF:
+  - 2ndFlrSF:
+  - LowQualFinSF:
+  - GrLivArea:
+Baths:
+    BsmtFullBath:
+    BsmtHalfBath:
+    FullBath:
+    HalfBath:
+Bedroom:
+Access:
+  - LotFrontage:
+  - PavedDrive: Very similar to others
+  - Street:
+  - Alley:
+Shape:
+  - LotShape:
+  - LandContour:
+  - LandSlope:
+Utilities:
+  - Heating:
+  - HeatingQC:
+  - CentralAir:
+  - Electrical:
+Conditions:
+  - Condition1 and Condition2:
+    - might want to combine these two conditions and one-hot encode them.
+    - Can make one category for railroad proximity, but it may be non-linear
+Building:
+  - BldgType:
+  - HouseStyle:
+Quality:
+  - OverallQual:
+  - OverallCond:
+  - Functional:
+    Kitchen:
+        KitchenQual:
+Exterior:
+  - LotArea:
+  - RoofStyle:
+  - RoofMatl:
+  - Exterior1st:
+  - Exterior2nd:
+  - MasVnrType:
+  - MasVnrArea:
+  - ExterQual: probably best to combine with exterior condition
+  - ExterCond:
+Foundation:
+Basement: may want to one-hot encode if there is a basement or not.
+  - BsmtQual:
+  - BsmtCond:
+  - BsmtExposure:
+  - BsmtFinType1:
+  - BsmtFinSF1:
+  - BsmtFinType2:
+  - BsmtFinSF2:
+  - BsmtUnfSF:
+  - TotalBsmtSF:
+TotRmsAbvGrd:
+Things:
+    Fireplaces:
+        FireplaceQu:
+    Garage:
+      - GarageType:
+        GarageYrBlt:
+        GarageFinish:
+        GarageCars:
+        GarageArea:
+        GarageQual:
+        GarageCond:
+    WoodDeckSF:
+    Porch:
+        OpenPorchSF:
+        EnclosedPorch:
+        3SsnPorch:
+        ScreenPorch:
+    Pool: may want to one-hot encode if they have a pool
+        PoolArea:
+        PoolQC:
+    Fence:
+    MiscFeature: should one-hot encode this
+        MiscVal:

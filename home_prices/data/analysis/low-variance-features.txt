@@ -1,0 +1,12 @@
+Street
+Alley
+Utilities
+LandSlope
+Condition2
+Heating
+CentralAir
+BsmtHalfBath
+KitchenAbvGr
+PoolArea
+PoolQC
+MiscFeature
